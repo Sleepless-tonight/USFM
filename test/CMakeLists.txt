@@ -10,7 +10,7 @@ project(test)
 # -Wall：生成所有警告信息。一下是具体的选项，可以单独使用
 set(CMAKE_C_STANDARD 11)
 
-# 使用包PkgConfig检测GTK +头文件/库文件
+# 使用包PkgConfig检测 GTK+ 头文件/库文件
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 # 配置加载native依赖
