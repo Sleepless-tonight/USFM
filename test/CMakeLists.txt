@@ -24,7 +24,7 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 # 添加从hello.c编译的可执行文件
 add_executable(test main.c)
-# 与上面的区别在于：这意味着您将使它成为Windows程序，并提供WinMain函数。（可以隐藏CMD）
+# 与上面的区别在于：这意味着您将使它成为Windows程序，并提供WinMain函数(int main(int, char **)是入口点的控制台版本。int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int))。（可以隐藏CMD）
 #add_executable(test WIN32 main.c)
 
 # 链接库

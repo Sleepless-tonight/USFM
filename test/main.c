@@ -12,7 +12,7 @@ static void activate(GtkApplication *app, gpointer user_data) {
     GtkWidget *button;
     GtkWidget *button_box;
     window = gtk_application_window_new(app);
-    gtk_window_set_title(GTK_WINDOW (window), "Understand SQL File Manager");
+    gtk_window_set_title(GTK_WINDOW (window), "RedisClient");
     gtk_window_set_default_size(GTK_WINDOW (window), 600, 600);
 
     button_box = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
