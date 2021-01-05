@@ -12,15 +12,15 @@ set(CMAKE_C_STANDARD 11)
 
 # 使用包PkgConfig检测 GTK+ 头文件/库文件
 find_package(PkgConfig REQUIRED)
-pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+pkg_check_modules(GTK4 REQUIRED gtk4)
 # 配置加载native依赖
 # CMake使用GTK +，告诉编译器在哪里查找头文件
 # 和链接器在哪里查找库文件
-include_directories(${GTK3_INCLUDE_DIRS})
-link_directories(${GTK3_LIBRARY_DIRS})
+include_directories(${GTK4_INCLUDE_DIRS})
+link_directories(${GTK4_LIBRARY_DIRS})
 
 # 将其他标志添加到编译器
-add_definitions(${GTK3_CFLAGS_OTHER})
+add_definitions(${GTK4_CFLAGS_OTHER})
 
 # 添加从hello.c编译的可执行文件
 add_executable(test main.c)
@@ -28,6 +28,6 @@ add_executable(test main.c)
 #add_executable(test WIN32 main.c)
 
 # 链接库
-target_link_libraries(test ${GTK3_LIBRARIES})
+target_link_libraries(test ${GTK4_LIBRARIES})
 # 隐藏 CMD
 target_link_options(test PRIVATE -mwindows)
