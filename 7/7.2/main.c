@@ -6,9 +6,9 @@
 
 #include <stdio.h>
 int main(void) {
-    int number = 0;
+    long long int number = 0;
     // pnumber 变量是个指针变量
-    int *pnumber = NULL;
+    long long int *pnumber = NULL;
     number = 10;
 //    printf("number's address: %p\n", &number);
 //    printf("number's value: %d\n\n", number);
