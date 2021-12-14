@@ -3,12 +3,12 @@
 //
 //
 #include <stdio.h>
+int main(void){
 
 #ifdef __STDC_NO_VAL__
     printf("not");
     exit(1);
 #endif
-int main(void){
     size_t size = 0;
 //    动态数组
     scanf("%zd", &size);
