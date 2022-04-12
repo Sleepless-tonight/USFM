@@ -4,24 +4,18 @@
 #include "stdio.h"
 #include "stdarg.h"
 
-# define __STDC_WANT_LIB_EXT1__ 1
-
-unsigned long long factorial(unsigned long long);
+double average(double vl, double v2, ...);
 
 int main(void) {
-    unsigned long long number = 0LL;
-    printf("Enter an integer value:");
-    scanf_s("%llu", &number);
-    printf("The factorial of %llu is %llu\n", number, factorial(number));
+    double v1 = 10.5, v2 = 2.5;
+    int num1 = 6, num2 = 5;
+    long num3 = 12L, num4 = 20L;
+    printf("Average = %.2lf\n", average(v1, 3.5, v2, 4.5, 0.0));
+    printf("Average = %.2lf\n", average(1.0, 2.0, 0.0));
+    printf("Average = %.2lf\n", average((double) num2, v2, (double) num1, (double) num4, (double) num3, 0.0));
     return 0;
 }
 
-unsigned long long factorial(unsigned long long n) {
-    if (n < 2LL)
-        return n;
-    return n * factorial(n - 1LL);
-
-}
 
 double average(double vl, double v2, ...) {
     va_list parg;                                       // Pointer for variable argument list
